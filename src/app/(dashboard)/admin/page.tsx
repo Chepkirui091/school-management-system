@@ -1,9 +1,10 @@
 import React from 'react';
 import UserCard from "@/components/@page-components/UserCard";
-import {RadialBarChart} from "recharts";
 import CountChart from "@/components/@page-components/charts/CountChart";
 import AttendanceChart from "@/components/@page-components/charts/AttendanceChart";
 import FinanceChart from "@/components/@page-components/charts/FinanceChart";
+import EventCalendar from "@/components/@page-components/calendar/EventCalendar";
+import Announcements from "@/components/@page-components/announcements/page";
 
 export default function AdminPage() {
     return (
@@ -22,21 +23,24 @@ export default function AdminPage() {
                     <div className="flex gap-4 flex-col lg:flex-row ">
                         {/*COUNT CHART*/}
                         <div className="w-full  lg:w-1/3 h-[450px]">
-                            <CountChart />
+                            <CountChart/>
                         </div>
                         {/*ATTENDANCE CHART*/}
                         <div className="w-full  lg:w-2/3 h-[450px]">
-                            <AttendanceChart />
+                            <AttendanceChart/>
                         </div>
                     </div>
                     {/*BOTTOM CHART*/}
                     <div className="w-full h-[500px]">
-                        <FinanceChart />
+                        <FinanceChart/>
                     </div>
                 </div>
 
                 {/*RIGHT*/}
-                <div className='w-full lg:w-1/3'>Admin PAge</div>
+                <div className='w-full lg:w-1/3 flex flex-col gap-8'>
+                    <EventCalendar/>
+                    <Announcements />
+                </div>
             </div>
         </>
     )
