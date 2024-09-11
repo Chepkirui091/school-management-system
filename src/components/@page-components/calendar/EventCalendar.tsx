@@ -30,7 +30,6 @@ const EventCalendar = () => {
             description: "Lorem Ipsum dolor sit amet, consectetur adipiscing elit",
         }
     ]
-
     return (
         <div className="bg-">
             <Calendar onChange={onChange} value={value}/>
