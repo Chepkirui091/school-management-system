@@ -4,14 +4,14 @@ import NavBar from "@/components/@page-components/Navbar";
 
 export default function DashboardLayout({
                                             children,
-     }: Readonly<{
-    children: React.ReactNode;
+                                        }: Readonly<{
+                                            children: React.ReactNode;
                                         }>
 ) {
     return <div className="h-screen flex">
         {/*LEFT*/}
         <div className="w-[14%] md:[8%] lg:[16%] xl:[14%] bg-[#0B0F19]">
-            <Logo />
+            <Logo/>
             <Menu/>
         </div>
         {/*RIGHT*/}

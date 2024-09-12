@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Announcements from "@/components/@page-components/announcements/page";
 import BigCalendar from "@/components/@shared-components/BigCalendar/page";
 import "react-big-calendar/lib/css/react-big-calendar.css"
@@ -13,12 +13,12 @@ const TeacherPage = () => {
             {/* LEFT */}
             <div className='w-full xl:w-2/3 flex flex-col'>
                 <h1 className="font-semibold text-xl">Schedule</h1>
-                <BigCalendar />
+                <BigCalendar/>
             </div>
 
             {/* RIGHT */}
             <div className='w-full xl:w-1/3 flex flex-col gap-8'>
-                <Announcements />
+                <Announcements/>
             </div>
         </div>
     )
