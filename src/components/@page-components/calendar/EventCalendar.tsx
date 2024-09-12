@@ -3,12 +3,12 @@
 import {useState} from "react";
 import Calendar from "react-calendar";
 import Image from "next/image";
+import "react-calendar/dist/Calendar.css";
 
-const EventCalendar = () => {
-    type ValuePiece = Date | null;
 
-    type Value = ValuePiece | [ValuePiece, ValuePiece];
-    const [value, onChange] = useState<Value>(new Date());
+type ValuePiece = Date | null;
+type Value = ValuePiece | [ValuePiece, ValuePiece];
+
 
     const events = [
         {
@@ -30,8 +30,14 @@ const EventCalendar = () => {
             description: "Lorem Ipsum dolor sit amet, consectetur adipiscing elit",
         }
     ]
+
+const EventCalendar = () => {
+    type ValuePiece = Date | null;
+
+    type Value = ValuePiece | [ValuePiece, ValuePiece];
+    const [value, onChange] = useState<Value>(new Date());
     return (
-        <div className="bg-">
+        <div className="bg-white p-4 rounded-md">
             <Calendar onChange={onChange} value={value}/>
             <div className="flex items-center justify-between">
                 <h1 className="text-xl font-semibold my-4">Events</h1>
@@ -44,7 +50,7 @@ const EventCalendar = () => {
                         key={events.id}>
                         <div className="flex items-center justify-between">
                             <h1 className="font-semibold text-gray-600 ">{events.title}</h1>
-                            <span className="text-gray-800 text-xs">{events.time}</span>
+                            <span className="text-gray-300 text-xs">{events.time}</span>
                         </div>
                         <p className="mt-2 text-sm text-gray-400">{events.description}</p>
                     </div>
