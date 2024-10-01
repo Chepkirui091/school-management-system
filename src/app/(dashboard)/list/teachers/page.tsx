@@ -1,8 +1,49 @@
 import TableSearch from "@/components/@page-components/table-search/page";
 import Image from "next/image";
 import Pagination from "@/components/@shared-components/pagination/page";
+import Table from "@/components/@page-components/Table/page";
+
+type Teacher = {
+    id: number;
+    teacherId: string;
+    name: string;
+    photo: string;
+    phone: string;
+    subjects: string[];
+    classes: string[];
+    address: string;
+
+}
+
+const columns = [
+    {
+        header: "Info", accessor: "info"
+    },
+    {
+        header: "Teacher Id", accessor: "teacherId", classname: "hidden md:table-cell "
+    },
+    {
+        header: "Subjects", accessor: "subjects", classname: "hidden md:table-cell "
+    },
+    {
+        header: "Classes", accessor: "classes", classname: "hidden md:table-cell "
+    },
+    {
+        header: "Phone", accessor: "phone", classname: "hidden lg:table-cell "
+    },
+    {
+        header: "Address", accessor: "address", classname: "hidden lg:table-cell "
+    },
+    {
+        header: "Actions", accessor: "actions"
+    }
+]
 
 const TeacherListPage = () => {
+
+    const renderRow = (item:Teacher) => {
+
+    }
     return (
         <div className="text-black bg-white p-4 rounded-md m-4 flex-1 mt-0">
             {/*TOP*/}
@@ -24,9 +65,9 @@ const TeacherListPage = () => {
                 </div>
             </div>
             {/*LIST*/}
-            <div className=""></div>
+            <Table columns = {columns}/>
             {/*PAGINATION*/}
-                <Pagination />
+            <Pagination/>
         </div>
     )
 }
