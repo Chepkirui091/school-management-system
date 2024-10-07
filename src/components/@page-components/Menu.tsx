@@ -43,13 +43,13 @@ const menuItems = [
                 visible: ["admin", "teacher"],
             },
             {
-                icon: "/lesson.png",
+                icon: "/lessons.png",
                 label: "Lessons",
                 href: "/list/lessons",
                 visible: ["admin", "teacher"],
             },
             {
-                icon: "/exam.png",
+                icon: "/exams.png",
                 label: "Exams",
                 href: "/list/exams",
                 visible: ["admin", "teacher", "student", "parent"],

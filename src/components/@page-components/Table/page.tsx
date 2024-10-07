@@ -4,7 +4,7 @@ const Table = ({
     data,
 
                }: {
-    columns: { header: string; accessor: string; classname?: string }[];
+    columns: { header: string; accessor: string; className?: string }[];
     renderRow: (item:any) => React.ReactNode;
     data: any[];
 }) => {
@@ -14,7 +14,7 @@ const Table = ({
                 <thead>
                 <tr className="text-left text-gray-500 text-sm">
                     {columns.map((col) => (
-                        <th scope="col" key={col.accessor} className={col.classname || ""}>
+                        <th scope="col" key={col.accessor} className={col.className || ""}>
                             {col.header}
                         </th>
                     ))}

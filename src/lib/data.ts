@@ -674,7 +674,7 @@ export const resultsData = [
     teacher: "John Doe",
     student: "John Doe",
     date: "2025-01-01",
-    type: "exam",
+    type: "exams",
     score: 90,
   },
   {
@@ -684,7 +684,7 @@ export const resultsData = [
     teacher: "John Doe",
     student: "John Doe",
     date: "2025-01-01",
-    type: "exam",
+    type: "exams",
     score: 90,
   },
   {
@@ -694,7 +694,7 @@ export const resultsData = [
     teacher: "John Doe",
     student: "John Doe",
     date: "2025-01-01",
-    type: "exam",
+    type: "exams",
     score: 90,
   },
   {
@@ -704,7 +704,7 @@ export const resultsData = [
     teacher: "John Doe",
     student: "John Doe",
     date: "2025-01-01",
-    type: "exam",
+    type: "exams",
     score: 90,
   },
   {
@@ -714,7 +714,7 @@ export const resultsData = [
     teacher: "John Doe",
     student: "John Doe",
     date: "2025-01-01",
-    type: "exam",
+    type: "exams",
     score: 90,
   },
   {
@@ -724,7 +724,7 @@ export const resultsData = [
     teacher: "John Doe",
     student: "John Doe",
     date: "2025-01-01",
-    type: "exam",
+    type: "exams",
     score: 90,
   },
   {
@@ -734,7 +734,7 @@ export const resultsData = [
     teacher: "John Doe",
     student: "John Doe",
     date: "2025-01-01",
-    type: "exam",
+    type: "exams",
     score: 90,
   },
   {
@@ -744,7 +744,7 @@ export const resultsData = [
     teacher: "John Doe",
     student: "John Doe",
     date: "2025-01-01",
-    type: "exam",
+    type: "exams",
     score: 90,
   },
   {
@@ -754,7 +754,7 @@ export const resultsData = [
     teacher: "John Doe",
     student: "John Doe",
     date: "2025-01-01",
-    type: "exam",
+    type: "exams",
     score: 90,
   },
   {
@@ -764,7 +764,7 @@ export const resultsData = [
     teacher: "John Doe",
     student: "John Doe",
     date: "2025-01-01",
-    type: "exam",
+    type: "exams",
     score: 90,
   },
 ];
