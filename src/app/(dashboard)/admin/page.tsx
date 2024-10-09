@@ -3,8 +3,9 @@ import UserCard from "@/components/@page-components/UserCard";
 import CountChart from "@/components/@page-components/charts/CountChart";
 import AttendanceChart from "@/components/@page-components/charts/AttendanceChart";
 import FinanceChart from "@/components/@page-components/charts/FinanceChart";
-import EventCalendar from "@/components/@page-components/calendar/EventCalendar";
+import Page from "@/components/@page-components/calendar/EventCalendar/page";
 import Announcements from "@/components/@page-components/announcements/page";
+import EventCalendar from "@/components/@page-components/calendar/EventCalendar/page";
 
 export default function AdminPage() {
     return (

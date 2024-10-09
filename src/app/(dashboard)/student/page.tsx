@@ -1,10 +1,11 @@
 "use client"
 
 import React, { useState } from 'react';
-import EventCalendar from "@/components/@page-components/calendar/EventCalendar";
+import Page from "@/components/@page-components/calendar/EventCalendar/page";
 import Announcements from "@/components/@page-components/announcements/page";
-import BigCalendar from "@/components/@shared-components/BigCalendar/page";
+import BigCalendar from "@/components/@page-components/calendar/BigCalendar/page";
 import "react-big-calendar/lib/css/react-big-calendar.css"
+import EventCalendar from "@/components/@page-components/calendar/EventCalendar/page";
 
 const StudentPage = () => {
     // Get current date

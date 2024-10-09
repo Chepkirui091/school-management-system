@@ -2,7 +2,7 @@
 
 import React, {useState} from 'react';
 import Announcements from "@/components/@page-components/announcements/page";
-import BigCalendar from "@/components/@shared-components/BigCalendar/page";
+import BigCalendar from "@/components/@page-components/calendar/BigCalendar/page";
 import "react-big-calendar/lib/css/react-big-calendar.css"
 
 const TeacherPage = () => {
