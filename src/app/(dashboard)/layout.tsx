@@ -3,21 +3,22 @@ import Menu from "@/components/@page-components/Menu";
 import NavBar from "@/components/@page-components/Navbar";
 
 export default function DashboardLayout({
-                                            children,
-                                        }: Readonly<{
-                                            children: React.ReactNode;
-                                        }>
-) {
-    return <div className="h-screen flex">
-        {/*LEFT*/}
-        <div className="w-[14%] md:[8%] lg:[16%] xl:[14%] bg-[#0B0F19]">
-            <Logo/>
-            <Menu/>
-        </div>
-        {/*RIGHT*/}
-        <div className="w-[86%] md:[92%] lg:[84%] xl:[86%] bg-[#F7F8FA] overflow-scroll flex flex-col ">
-            <NavBar/>
-            {children}
-        </div>
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <div className="h-screen flex bg-background">
+      {/* Sidebar */}
+      <aside className="w-[14%] min-w-[72px] md:min-w-[80px] lg:w-56 xl:w-60 flex-shrink-0 bg-sidebar border-r border-white/10 flex flex-col">
+        <Logo />
+        <Menu />
+      </aside>
+      {/* Main */}
+      <div className="flex-1 overflow-auto flex flex-col min-w-0">
+        <NavBar />
+        <main className="flex-1">{children}</main>
+      </div>
     </div>
+  );
 }

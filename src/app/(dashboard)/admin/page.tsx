@@ -10,7 +10,7 @@ import EventCalendar from "@/components/@page-components/calendar/EventCalendar/
 export default function AdminPage() {
     return (
         <>
-            <div className="p-4 flex gap-4 flex-col md:flex-row text-black">
+            <div className="p-4 md:p-6 flex gap-6 flex-col lg:flex-row text-foreground">
                 {/*LEFT*/}
                 <div className='w-full lg:w-2/3'>
                     {/*USER CARDS*/}

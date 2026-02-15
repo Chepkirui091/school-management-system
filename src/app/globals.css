@@ -3,137 +3,165 @@
 @tailwind utilities;
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+  --background: #f7f8fa;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --border: #e2e8f0;
+  --sidebar: #0b0f19;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
+.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card: #1e293b;
+  --card-foreground: #f1f5f9;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  --border: #334155;
+  --sidebar: #020617;
 }
 
 body {
-    color: var(--foreground);
-    background: var(--background);
-    font-family: Arial, Helvetica, sans-serif;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
 @layer utilities {
-    .text-balance {
-        text-wrap: balance;
-    }
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 
+/* Calendar - light */
 .react-calendar {
-    width: 100% !important;
-    border: none !important;
-    font-family: "Inter", sans-serif !important;
+  width: 100% !important;
+  border: none !important;
+  font-family: var(--font-geist-sans), system-ui, sans-serif !important;
+  background: transparent !important;
 }
 
 .react-calendar__navigation__label__labelText {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .react-calendar__tile--active {
-    background-color: #c3ebfa !important;
-    color: black !important;
+  background-color: #c3ebfa !important;
+  color: #0f172a !important;
 }
 
+.react-calendar__tile:enabled:hover {
+  background-color: #e2e8f0 !important;
+}
+
+/* Calendar - dark */
+.dark .react-calendar__tile--active {
+  background-color: #0e7490 !important;
+  color: #f0fdfa !important;
+}
+
+.dark .react-calendar__tile:enabled:hover {
+  background-color: #334155 !important;
+}
+
+.dark .react-calendar__navigation button {
+  color: #94a3b8;
+}
+
+.dark .react-calendar__month-view__days__day {
+  color: #cbd5e1;
+}
+
+/* Big calendar / RBC - light */
 .rbc-btn-group:first-child {
-    display: none !important;
+  display: none !important;
 }
 
 .rbc-toolbar-label {
-    text-align: right !important;
-    padding: 0px 20px !important;
+  text-align: right !important;
+  padding: 0px 20px !important;
+  font-weight: 600;
 }
 
 .rbc-btn-group:last-child {
-    font-size: 13px !important;
+  font-size: 13px !important;
 }
 
 .rbc-btn-group:last-child button {
-    border: none !important;
-    background-color: #f1f0ff !important;
-    margin-left: 2px !important;
+  border: none !important;
+  background-color: #f1f0ff !important;
+  margin-left: 2px !important;
+  color: #3730a3 !important;
 }
 
 .rbc-toolbar button.rbc-active {
-    background-color: #dbdafe !important;
-    box-shadow: none !important;
+  background-color: #dbdafe !important;
+  box-shadow: none !important;
 }
 
 .rbc-time-view {
-    border-color: #eee !important;
+  border-color: var(--border) !important;
 }
 
 .rbc-time-header {
-    display: none !important;
+  display: none !important;
 }
 
 .rbc-time-content {
-    border: none !important;
+  border: none !important;
 }
 
 .rbc-time-gutter.rbc-time-column {
-    font-size: 12px !important;
+  font-size: 12px !important;
+  color: var(--muted-foreground);
 }
 
 .rbc-time-gutter.rbc-time-column .rbc-timeslot-group {
-    padding: 0px 20px !important;
+  padding: 0px 20px !important;
 }
 
 .rbc-timeslot-group {
-    background-color: #f7fdff !important;
+  background-color: #f7fdff !important;
+}
+
+.dark .rbc-timeslot-group {
+  background-color: #1e293b !important;
 }
 
 .rbc-day-slot {
-    font-size: 14px !important;
+  font-size: 14px !important;
 }
 
 .rbc-event {
-    border: none !important;
-    color: black !important;
-    padding: 10px !important;
-    margin: 10px !important;
-    width: 99% !important;
+  border: none !important;
+  color: #0f172a !important;
+  padding: 10px !important;
+  margin: 10px !important;
+  width: 99% !important;
 }
 
-.rbc-event:nth-child(1) {
-    background-color: #e2f8ff !important;
-}
+.rbc-event:nth-child(1) { background-color: #e2f8ff !important; }
+.rbc-event:nth-child(2) { background-color: #fefce8 !important; }
+.rbc-event:nth-child(3) { background-color: #f2f1ff !important; }
+.rbc-event:nth-child(4) { background-color: #fdf2fb !important; }
+.rbc-event:nth-child(5) { background-color: #e2f8ff !important; }
+.rbc-event:nth-child(6) { background-color: #fefce8 !important; }
+.rbc-event:nth-child(7) { background-color: #f2f1ff !important; }
+.rbc-event:nth-child(8) { background-color: #fdf2fb !important; }
 
-.rbc-event:nth-child(2) {
-    background-color: #fefce8 !important;
-}
-
-.rbc-event:nth-child(3) {
-    background-color: #f2f1ff !important;
-}
-
-.rbc-event:nth-child(4) {
-    background-color: #fdf2fb !important;
-}
-
-.rbc-event:nth-child(5) {
-    background-color: #e2f8ff !important;
-}
-
-.rbc-event:nth-child(6) {
-    background-color: #fefce8 !important;
-}
-
-.rbc-event:nth-child(7) {
-    background-color: #f2f1ff !important;
-}
-
-.rbc-event:nth-child(8) {
-    background-color: #fdf2fb !important;
-}
+.dark .rbc-event:nth-child(1) { background-color: #164e63 !important; color: #cffafe !important; }
+.dark .rbc-event:nth-child(2) { background-color: #713f12 !important; color: #fef9c3 !important; }
+.dark .rbc-event:nth-child(3) { background-color: #3730a3 !important; color: #e0e7ff !important; }
+.dark .rbc-event:nth-child(4) { background-color: #831843 !important; color: #fce7f3 !important; }
+.dark .rbc-event:nth-child(5) { background-color: #164e63 !important; color: #cffafe !important; }
+.dark .rbc-event:nth-child(6) { background-color: #713f12 !important; color: #fef9c3 !important; }
+.dark .rbc-event:nth-child(7) { background-color: #3730a3 !important; color: #e0e7ff !important; }
+.dark .rbc-event:nth-child(8) { background-color: #831843 !important; color: #fce7f3 !important; }
 
 .rbc-event-label {
-    color: gray !important;
-    margin-bottom: 5px;
+  color: var(--muted-foreground) !important;
+  margin-bottom: 5px;
 }

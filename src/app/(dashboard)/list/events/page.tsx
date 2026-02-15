@@ -38,7 +38,7 @@ const columns = [
 const EventsListPage = () => {
 
     const renderRow = (item: Events) => (
-        <tr key={item.id} className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lamaPurpleLight">
+        <tr key={item.id} className="border-b border-border even:bg-muted/30 text-sm hover:bg-lamaPurpleLight/50 dark:hover:bg-white/5 transition-colors">
             <td className="flex items-center gap-4 p-4">
                 <h3 className="font-semibold">{item.title}</h3>
             </td>
@@ -65,7 +65,7 @@ const EventsListPage = () => {
 
 
     return (
-        <div className="text-black bg-white p-4 rounded-md m-4 flex-1 mt-0">
+        <div className="bg-card text-card-foreground p-4 md:p-6 rounded-xl mx-4 mb-4 mt-0 shadow-card border border-border">
             {/*TOP*/}
             <div className="flex items-center justify-between">
                 <h1 className="hidden md:block text-lg font-semibold">All Events</h1>
@@ -74,14 +74,14 @@ const EventsListPage = () => {
                 </div>
                 <div className="flex items-center gap-4 self-end">
                     <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
-                        <Image src="/filter.png " alt="" width={14} height={14}/>
+                        <Image src="/filter.png" alt="" width={14} height={14}/>
                     </button>
                     <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
-                        <Image src="/sort.png " alt="" width={14} height={14}/>
+                        <Image src="/sort.png" alt="" width={14} height={14}/>
                     </button>
                     {role === "admin" && (
                         <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
-                            <Image src="/plus.png " alt="" width={14} height={14}/>
+                            <Image src="/plus.png" alt="" width={14} height={14}/>
                         </button>
                     )}
                 </div>

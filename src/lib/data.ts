@@ -88,7 +88,7 @@ export const teachersData = [
     address: "123 Main St, Anytown, USA",
   },
   {
-    id: 8,
+    id: 7,
     teacherId: "1234567890",
     name: "Ophelia Castro",
     email: "ophelia@castro.com",
@@ -211,7 +211,7 @@ export const studentsData = [
     address: "123 Main St, Anytown, USA",
   },
   {
-    id: 8,
+    id: 7,
     studentId: "1234567890",
     name: "Ophelia Castro",
     email: "ophelia@castro.com",
@@ -306,7 +306,7 @@ export const parentsData = [
     address: "123 Main St, Anytown, USA",
   },
   {
-    id: 8,
+    id: 7,
     name: "Ophelia Castro",
     students: ["Alexander Blair"],
     email: "mike@geller.com",
@@ -368,7 +368,7 @@ export const subjectsData = [
     teachers: ["Lora French", "Sue Brady"],
   },
   {
-    id: 8,
+    id: 7,
     name: "Art",
     teachers: ["Harriet Alvarado", "Mayme Keller"],
   },
@@ -421,14 +421,14 @@ export const classesData = [
     supervisor: "Iva Frank",
   },
   {
-    id: 5,
+    id: 6,
     name: "5B",
     capacity: 20,
     grade: 5,
     supervisor: "Leila Santos",
   },
   {
-    id: 8,
+    id: 7,
     name: "7A",
     capacity: 18,
     grade: 8,
@@ -501,7 +501,7 @@ export const lessonsData = [
     teacher: "Herman Howard",
   },
   {
-    id: 8,
+    id: 7,
     subject: "Geography",
     class: "6B",
     teacher: "Lucinda Thomas",
@@ -571,7 +571,7 @@ export const examsData = [
     date: "2025-01-01",
   },
   {
-    id: 8,
+    id: 7,
     subject: "Geography",
     class: "6B",
     teacher: "Hunter Fuller",
@@ -644,7 +644,7 @@ export const assignmentsData = [
     dueDate: "2025-01-01",
   },
   {
-    id: 8,
+    id: 7,
     subject: "Geography",
     class: "6B",
     teacher: "Don Holloway",
@@ -738,7 +738,7 @@ export const resultsData = [
     score: 90,
   },
   {
-    id: 8,
+    id: 7,
     subject: "Geography",
     class: "6B",
     teacher: "John Doe",
@@ -827,7 +827,7 @@ export const eventsData = [
     endTime: "11:00",
   },
   {
-    id: 8,
+    id: 7,
     title: "Cycling Race",
     class: "3B",
     date: "2025-01-01",
@@ -850,6 +850,27 @@ export const eventsData = [
     startTime: "10:00",
     endTime: "11:00",
   },
+];
+
+export const attendanceData = [
+  { id: 1, studentName: "John Doe", class: "5A", date: "2025-02-10", status: "present" },
+  { id: 2, studentName: "Jane Doe", class: "5A", date: "2025-02-10", status: "present" },
+  { id: 3, studentName: "Mike Geller", class: "5A", date: "2025-02-10", status: "absent" },
+  { id: 4, studentName: "Jay French", class: "5A", date: "2025-02-10", status: "present" },
+  { id: 5, studentName: "Jane Smith", class: "5A", date: "2025-02-10", status: "present" },
+  { id: 6, studentName: "Anna Santiago", class: "5A", date: "2025-02-10", status: "late" },
+  { id: 7, studentName: "Allen Black", class: "5A", date: "2025-02-10", status: "present" },
+  { id: 8, studentName: "Ophelia Castro", class: "5A", date: "2025-02-10", status: "absent" },
+  { id: 9, studentName: "Derek Briggs", class: "5A", date: "2025-02-10", status: "present" },
+  { id: 10, studentName: "John Glover", class: "5A", date: "2025-02-10", status: "present" },
+];
+
+export const messagesData = [
+  { id: 1, from: "John Doe", subject: "Math homework", date: "2025-02-14", read: false },
+  { id: 2, from: "Jane Smith", subject: "Parent meeting", date: "2025-02-13", read: true },
+  { id: 3, from: "Admin", subject: "School closure", date: "2025-02-12", read: true },
+  { id: 4, from: "Mike Geller", subject: "Field trip", date: "2025-02-11", read: false },
+  { id: 5, from: "Anna Santiago", subject: "Report card", date: "2025-02-10", read: true },
 ];
 
 export const announcementsData = [
@@ -896,7 +917,7 @@ export const announcementsData = [
     date: "2025-01-01",
   },
   {
-    id: 8,
+    id: 7,
     title: "About 4B Math Test",
     class: "4B",
     date: "2025-01-01",

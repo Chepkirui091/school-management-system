@@ -9,9 +9,8 @@ const TeacherPage = () => {
     const [activeTab, setActiveTab] = useState('Day');
 
     return (
-        <div className='p-4 flex gap-4 flex-col xl:flex-row text-black flex-1 '>
-            {/* LEFT */}
-            <div className='w-full xl:w-2/3 flex flex-col'>
+        <div className="p-4 md:p-6 flex gap-6 flex-col xl:flex-row text-foreground flex-1">
+            <div className="w-full xl:w-2/3 flex flex-col gap-4">
                 <h1 className="font-semibold text-xl">Schedule</h1>
                 <BigCalendar/>
             </div>
